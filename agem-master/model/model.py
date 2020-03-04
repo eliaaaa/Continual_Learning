@@ -1177,7 +1177,7 @@ class Model:
                 shape = v.get_shape()
                 v_params = 1
                 for dim in shape:
-                    v_params *= dim.value
+                    v_params *= dim
                 store_proj_grad_ops.append(tf.assign(v, tf.reshape(projected_gradients[offset:offset+v_params], shape)))
                 offset += v_params
             self.store_proj_grads = tf.group(*store_proj_grad_ops)
