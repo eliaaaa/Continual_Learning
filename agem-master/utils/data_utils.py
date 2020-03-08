@@ -312,7 +312,7 @@ def construct_split_cub(task_labels, data_dir, train_list_file, test_list_file, 
     # Get the attribute vector
     if attr_file:
         with open(attr_file, 'rb') as f:
-            cub_attr = pickle.load(f)
+            cub_attr = pickle.load(f,encoding='bytes')
 
     # Define a list for storing the data for different tasks
     datasets = []

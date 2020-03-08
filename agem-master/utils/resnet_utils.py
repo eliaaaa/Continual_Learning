@@ -4,7 +4,7 @@
 # LICENSE file in the root directory of this source tree.
 
 import math
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 
 def _conv(x, kernel_size, out_channels, stride, var_list, pad="SAME", name="conv"):
